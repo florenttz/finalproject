@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Deluxe</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Hotel Deluxe</h1>
+        <nav>
+            <ul>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="rooms">
+        <h2>Our Rooms</h2>
+        <div class="room-gallery">
+            <div class="room">
+                <img src="images/room1.jpg" alt="Deluxe Room">
+                <h3>Deluxe Room</h3>
+                <p>Price: $100/night</p>
+            </div>
+            <div class="room">
+                <img src="images/room2.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Price: $150/night</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="booking">
+        <h2>Book Your Stay</h2>
+        <form action="php/booking.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="room">Select Room:</label>
+            <select id="room" name="room">
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite Room</option>
+            </select>
+            
+            <label for="date">Check-in Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <input type="submit" value="Book Now">
+        </form>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="php/contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Hotel Deluxe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
